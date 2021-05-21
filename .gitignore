@@ -2,6 +2,7 @@
 !client
 !.devcontainer
 !Dockerfile
+!env.sample
 !.gitignore
 !LICENSE
 !README.md
