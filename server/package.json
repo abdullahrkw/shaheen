@@ -1,0 +1,27 @@
+{
+  "name": "shaheen-backend-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahrkw/shaheen.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "MERN"
+  ],
+  "author": "abdullahrkw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullahrkw/shaheen/issues"
+  },
+  "homepage": "https://github.com/abdullahrkw/shaheen#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

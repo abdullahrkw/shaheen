@@ -1,0 +1,13 @@
+{
+    "name": "Shaheen",
+    "dockerFile": "Dockerfile",
+    "appPort": [],
+    "extensions": [],
+    "runArgs": [
+      "--net","host",
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/usr/bin/fish"
+    },    
+    "postCreateCommand": "npm --prefix server install && cd client && yarn install && yarn build"
+}
