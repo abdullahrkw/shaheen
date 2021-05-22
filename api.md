@@ -1,6 +1,8 @@
 # Shaheen Client/Server Communication API
 
-## GET /tiles [Content-Type: application/json]
+## Request/Response
+### GET /tiles [Content-Type: application/json]
+-----------------------------------------------------
 ```json
 {
     "tiles": [
@@ -10,7 +12,8 @@
 }
 ```
 
-## GET /rooms [Content-Type: application/json]
+### GET /rooms [Content-Type: application/json]
+----------------------------------------------------
 ```json
 {
     "rooms": [
@@ -46,7 +49,8 @@
 }
 ```
 
-## GET /decor?tileid=1&&roomid=1&&regionid=1 [Content-Type: application/json]
+### GET /decor?tileid=1&&roomid=1&&regionid=1 [Content-Type: application/json]
+-----------------------------------------------------
 ```json
 {
     "url": "/path/to/new/image.png"
