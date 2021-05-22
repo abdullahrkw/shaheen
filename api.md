@@ -1,7 +1,7 @@
 # Shaheen Client/Server Communication API
 
 ## Request/Response
-### GET /tiles [Content-Type: application/json]
+### GET /tiles
 -----------------------------------------------------
 ```json
 {
@@ -12,7 +12,7 @@
 }
 ```
 
-### GET /rooms [Content-Type: application/json]
+### GET /rooms
 ----------------------------------------------------
 ```json
 {
@@ -22,12 +22,12 @@
             "url": "/path/rooms/1/image.png", 
             "maps": [
                 {
-                "region_id": 1,
-                "region_coords": [[10, 20], [50, 50], [30, 30], [40, 40]]
+                "regionId": 1,
+                "regionCoords": [[10, 20], [50, 50], [30, 30], [40, 40]]
                 },
                 {
-                "region_id": 2,
-                "region_coords": [[100, 200], [500, 500], [300, 300], [400, 400]]
+                "regionId": 2,
+                "regionCoords": [[100, 200], [500, 500], [300, 300], [400, 400]]
                 }
             ]
         },
@@ -36,12 +36,12 @@
             "url": "/path/rooms/2/image.png", 
             "maps": [
                 {
-                "region_id": 1,
-                "region_coords": [[10, 20], [50, 50], [30, 30], [40, 40]]
+                "regionId": 1,
+                "regionCoords": [[10, 20], [50, 50], [30, 30], [40, 40]]
                 },
                 {
-                "region_id": 2,
-                "region_coords": [[100, 200], [500, 500], [300, 300], [400, 400]]
+                "regionId": 2,
+                "regionCoords": [[100, 200], [500, 500], [300, 300], [400, 400]]
                 }
             ]
         }
@@ -49,8 +49,22 @@
 }
 ```
 
-### GET /decor?tileid=1&&roomid=1&&regionid=1 [Content-Type: application/json]
+### POST /decor
 -----------------------------------------------------
+#### Request Body  [Content-Type: application/json]
+```json
+{
+    "tileId": 1,
+    "roomId": 2,
+    "regionId": 2,
+    "state": [
+        {"regionId": 1, "tileId": 2},
+        {"regionId": 2, "tileId": 2}
+    ]
+}
+```
+
+#### Response 
 ```json
 {
     "url": "/path/to/new/image.png"
