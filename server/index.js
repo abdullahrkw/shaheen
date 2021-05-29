@@ -20,6 +20,7 @@ app.use('/', express.static('../client/build'))
 app.use('/tiles', tiles);
 app.use('/rooms', rooms);
 app.use('/decor', decor);
+app.use('/assets', express.static('./assets'));
 
 app.listen(PORT, () => {
     console.log(`Shaheen is listening at http://localhost:${PORT}`)
