@@ -4,3 +4,7 @@
 !*.json
 !.gitignore
 !*.js
+!assets
+!*.png
+!*.jpg
+!*.jpeg
