@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require("body-parser");
 const app = express();
 const PORT = 3000;
 const laodEnv = require('dotenv').config({ path: '.env' });
@@ -8,8 +9,12 @@ const uri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PAS
 const client = new MongoClient(uri, {
     useUnifiedTopology: true
 });
-const testMongoDBConnection = require('./utils');
+const testMongoDBConnection = require('./utils').testMongoDBConnection;
 testMongoDBConnection(client);
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 
 const tiles = require('./routes/tiles');
 const rooms = require('./routes/rooms');
