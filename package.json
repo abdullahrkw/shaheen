@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "node index.js"
-  },
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn install && yarn run build"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abdullahrkw/shaheen.git"
