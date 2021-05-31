@@ -8,4 +8,7 @@
 !LICENSE
 !Procfile
 !README.md
-!server
+!routes
+!*.json
+!*.js
+!assets

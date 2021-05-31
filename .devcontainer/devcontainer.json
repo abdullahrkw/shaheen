@@ -9,5 +9,5 @@
     "settings": {
         "terminal.integrated.shell.linux": "/usr/bin/fish"
     },    
-    "postCreateCommand": "npm --prefix server install && cd client && yarn install && yarn build"
+    "postCreateCommand": "npm install && cd client && yarn install && yarn build"
 }
