@@ -71,3 +71,12 @@
 }
 
 ```
+
+Note: Region mapping is as follows
+```json
+{
+    "1" : "floor",
+    "2" : "left wall",
+    "3" : "right wall",
+    "4" : "front wall"
+}
