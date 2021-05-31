@@ -19,12 +19,12 @@ const tiles = require('./routes/tiles');
 const rooms = require('./routes/rooms');
 const decor = require('./routes/decor');
 
-app.use(express.static(`${process.env.PWD}/client/build`))
+app.use('/', express.static('./client/build'));
 
 app.use('/tiles', tiles);
 app.use('/rooms', rooms);
 app.use('/decor', decor);
-app.use('/assets', express.static(`${process.env.PWD}/assets`));
+app.use('/assets', express.static('./assets'));
 
 app.listen(PORT, () => {
     console.log(`Shaheen is listening at http://localhost:${PORT}`)

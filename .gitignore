@@ -12,3 +12,4 @@
 !*.json
 !*.js
 !assets
+!start-server.sh
