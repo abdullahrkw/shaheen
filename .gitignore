@@ -12,4 +12,4 @@
 !*.json
 !*.js
 !assets
-!start-server.sh
+!pre-deploy.sh
