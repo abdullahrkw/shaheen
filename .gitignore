@@ -6,5 +6,6 @@
 !env.sample
 !.gitignore
 !LICENSE
+!Procfile
 !README.md
 !server
