@@ -1,2 +1,2 @@
 release: ./pre-deploy.sh
-web: ./start-server.sh
+web: npm start
