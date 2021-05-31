@@ -19,7 +19,7 @@ const tiles = require('./routes/tiles');
 const rooms = require('./routes/rooms');
 const decor = require('./routes/decor');
 
-app.use('/', express.static('./client/build'));
+app.use('/', express.static('./client/public'));
 
 app.use('/tiles', tiles);
 app.use('/rooms', rooms);
