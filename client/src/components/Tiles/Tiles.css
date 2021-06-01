@@ -1,0 +1,21 @@
+#tiles-scrollbar{
+    position: relative;
+    background-color: antiquewhite;
+    width: 300px !important;
+    height: 500px !important;
+    font-size: 30px;
+    align-content: center;
+    overflow-y: scroll !important;
+}
+
+div.card-body{
+    width: 100px;
+    background-color: aliceblue;
+    font-size: 15px;
+    padding: 5px;
+}
+
+div.card{
+    padding: 5px;
+    cursor: pointer;
+}
