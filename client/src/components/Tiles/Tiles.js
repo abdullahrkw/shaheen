@@ -16,11 +16,11 @@ class Tiles extends React.Component {
         super(props);
         this.state = {
             tiles:[
-                {id: "1", path: "/assets/tiles/1.png"},
-                {id: "2", path: "/assets/tiles/2.png"},
-                {id: "3", path: "/assets/tiles/3.png"},
-                {id: "4", path: "/assets/tiles/4.png"},
-                {id: "5", path: "/assets/tiles/5.png"}
+                {id: "1", path: "/assets/tiles/1.jpg"},
+                {id: "2", path: "/assets/tiles/2.jpg"},
+                {id: "3", path: "/assets/tiles/3.jpg"},
+                {id: "4", path: "/assets/tiles/4.jpg"},
+                {id: "5", path: "/assets/tiles/5.jpg"}
             ]
         }
 

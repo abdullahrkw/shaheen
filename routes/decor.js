@@ -14,7 +14,7 @@ router.post('/', (req, res, next) => {
         return;
     }
 
-    if (store.results.indexOf(roomId + ".png") < 0) {
+    if (store.results.indexOf(roomId + ".jpg") < 0) {
         res.json({
             "error": true,
             "info": "result could not be found/created"
@@ -23,7 +23,7 @@ router.post('/', (req, res, next) => {
     }
 
     res.json({
-        "url": "/assets/results/" + roomId + ".png"
+        "url": "/assets/results/" + roomId + ".jpg"
     });
 });
 

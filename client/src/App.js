@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      room: {id: "1", path: "/assets/rooms/1.png"}
+      room: {id: "1", path: "/assets/rooms/1.jpg"}
     }
 
     this.updateRoom = this.updateRoom.bind(this);
