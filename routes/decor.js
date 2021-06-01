@@ -23,7 +23,7 @@ router.post('/', (req, res, next) => {
     }
 
     res.json({
-        "url": "/results/" + roomId + ".png"
+        "url": "/assets/results/" + roomId + ".png"
     });
 });
 

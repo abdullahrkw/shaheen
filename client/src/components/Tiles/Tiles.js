@@ -12,15 +12,21 @@ import './Tiles.css'
 
 
 class Tiles extends React.Component {
-    state = {
-        tiles:[
-            "/assets/tiles/1.png",
-            "/assets/tiles/2.png",
-            "/assets/tiles/3.png",
-            "/assets/tiles/4.png",
-            "/assets/tiles/5.png"
-        ]
+    constructor(props) {
+        super(props);
+        this.state = {
+            tiles:[
+                {id: "1", path: "/assets/tiles/1.png"},
+                {id: "2", path: "/assets/tiles/2.png"},
+                {id: "3", path: "/assets/tiles/3.png"},
+                {id: "4", path: "/assets/tiles/4.png"},
+                {id: "5", path: "/assets/tiles/5.png"}
+            ]
+        }
+
+        this.updateRoom = this.props.updateRoom;
     }
+
     render() {
         return (
             <Scrollbars id="tiles-scrollbar"
@@ -30,10 +36,10 @@ class Tiles extends React.Component {
             >
                 Tile Designs
                 {
-                    this.state.tiles.map((element, ind) =>
-                        <div id="single-tile" key={ind}>
-                            <Card style={{ display: 'flex'}} key={ind}>
-                                <CardImg loading="lazy" src={element} />
+                    this.state.tiles.map((element) =>
+                        <div id="single-tile" onClick={this.updateRoom.bind(this, element.id)} key={element.id}>
+                            <Card style={{ display: 'flex'}}>
+                                <CardImg loading="lazy" src={element.path} />
                                 <CardBody>
                                     <CardTitle><b>Tile</b>    </CardTitle>
                                     <CardSubtitle>Description </CardSubtitle>

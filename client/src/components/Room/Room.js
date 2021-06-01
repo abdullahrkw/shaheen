@@ -2,7 +2,19 @@ import React from 'react';
 import './Room.css'
 
 class Room extends React.Component {
-    state = {room: "/assets/rooms/1.png"}
+    constructor(props) {
+        super(props);
+        this.state = {
+            room: this.props.room
+        }
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState({
+            room: props.room
+        });
+    }
+
     render() {
         return (
             <div className="Room">
