@@ -1,13 +1,17 @@
 import Room from './components/Room/Room';
 import Tiles from './components/Tiles/Tiles'
+import React from 'react';
 
-function App() {
-  return (
-    <div>
-      <Room />
-      <Tiles />
-   </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <Room />
+        <Tiles />
+     </div>
+    );
+  }
 }
 
 export default App;
