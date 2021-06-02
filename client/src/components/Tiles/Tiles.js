@@ -1,5 +1,6 @@
 import Scrollbars from 'react-custom-scrollbars';
 import React from 'react';
+import axios from 'axios'
 import {
     Card,
     CardImg,
@@ -15,16 +16,16 @@ class Tiles extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tiles:[
-                {id: "1", path: "/assets/tiles/1.jpg"},
-                {id: "2", path: "/assets/tiles/2.jpg"},
-                {id: "3", path: "/assets/tiles/3.jpg"},
-                {id: "4", path: "/assets/tiles/4.jpg"},
-                {id: "5", path: "/assets/tiles/5.jpg"}
-            ]
+            tiles:[]
         }
 
         this.updateRoom = this.props.updateRoom;
+    }
+
+    componentDidMount() {
+        axios.get('/tiles').then(res => {
+            this.setState({tiles: res.data.tiles});
+        })
     }
 
     render() {
@@ -39,7 +40,7 @@ class Tiles extends React.Component {
                     this.state.tiles.map((element) =>
                         <div id="single-tile" onClick={this.updateRoom.bind(this, element.id)} key={element.id}>
                             <Card style={{ display: 'flex'}}>
-                                <CardImg loading="lazy" src={element.path} />
+                                <CardImg loading="lazy" src={element.url} />
                                 <CardBody>
                                     <CardTitle><b>Tile</b>    </CardTitle>
                                     <CardSubtitle>Description </CardSubtitle>
