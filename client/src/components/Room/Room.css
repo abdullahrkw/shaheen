@@ -2,4 +2,5 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    cursor: url("../../static/paint-brush.svg") 16 0,auto; /*!emojicursor.app*/
 }
