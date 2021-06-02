@@ -17,7 +17,7 @@ class Room extends React.Component {
 
     render() {
         return (
-            <div className="Room">
+            <div onClick={this.props.makeTilesVisible} className="Room">
                 <img src={this.state.room} className="room-img" alt="rooms" />
             </div>
         );
