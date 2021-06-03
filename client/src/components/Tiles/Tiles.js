@@ -30,7 +30,12 @@ class Tiles extends React.Component {
 
     render() {
         return (
-            <Scrollbars class="tiles-scrollbar" style={{ height: this.props.visible?500:0, width:300, transitionProperty: 'height', transitionDuration: '2s'}}
+            <Scrollbars class="tiles-scrollbar" style={{ 
+                                                    height: this.props.visible?500:0, 
+                                                    width:300,
+                                                    transitionProperty: 'height',
+                                                    transitionDuration: '2s', 
+                                                    overflowX: 'hidden'}}
                 renderTrackHorizontal={() => (
                     <div id="Reactsilder" style={{ display: 'none', marginBottom: '0px' }} />
                 )}
