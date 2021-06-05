@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       room: { id: "1", path: "/assets/rooms/1.jpg" },
       tilesVisibility: false,
-      isRoomLoading: false
+      isRoomLoading: true
     }
 
     this.updateRoom = this.updateRoom.bind(this);
@@ -39,7 +39,6 @@ class App extends React.Component {
 
   stopRoomLoading() {
     this.setState({ isRoomLoading: false });
-    console.log("Image Loaded");
   }
 
   render() {

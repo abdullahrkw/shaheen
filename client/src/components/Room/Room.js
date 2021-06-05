@@ -25,7 +25,7 @@ class Room extends React.Component {
         return (
             <div onClick={this.props.makeTilesVisible} className="Room">
                 <div className="loader">
-                    <Loader visible={isLoading} type="Puff" color="#00BFFF" height={100} width={100}/>
+                    <Loader visible={isLoading} type="Circles" color="#00BFFF" height={100} width={100}/>
                 </div>
                 <img style={roomStyle} src={this.state.room} className="room-img" alt="rooms" onLoad={this.props.stopRoomLoading}/>
             </div>
