@@ -6,8 +6,7 @@ class Room extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            room: this.props.room,
-            isLoading: this.props.isLoading
+            room: this.props.room
         }
     }
 
@@ -18,7 +17,7 @@ class Room extends React.Component {
     }
 
     render() {
-        let isLoading = this.state.isLoading;
+        let isLoading = this.props.isLoading;
         let roomStyle = {};
         if (isLoading) {
             roomStyle = {"opacity": 0.2};
@@ -26,9 +25,9 @@ class Room extends React.Component {
         return (
             <div onClick={this.props.makeTilesVisible} className="Room">
                 <div className="loader">
-                    <Loader visible={isLoading}type="Puff" color="#00BFFF" height={100} width={100}/>
+                    <Loader visible={isLoading} type="Puff" color="#00BFFF" height={100} width={100}/>
                 </div>
-                <img style={roomStyle} src={this.state.room} className="room-img" alt="rooms" />
+                <img style={roomStyle} src={this.state.room} className="room-img" alt="rooms" onLoad={this.props.stopRoomLoading}/>
             </div>
         );
     }
