@@ -8,7 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       room: {id: "1", path: "/assets/rooms/1.jpg"},
-      tilesVisibility: false
+      tilesVisibility: false,
+      isRoomLoading: false
     }
 
     this.updateRoom = this.updateRoom.bind(this);
@@ -16,6 +17,7 @@ class App extends React.Component {
   }
 
   updateRoom(newTildId) {
+    this.setState({isRoomLoading: true});
     axios.post("/decor", {
       tileId: newTildId, 
       roomId: this.state.room.id,
@@ -24,7 +26,8 @@ class App extends React.Component {
     }).then(res => {
       this.setState({
         room: {path: res.data.url, id: "1"},
-        tilesVisibility: false
+        tilesVisibility: false,
+        isRoomLoading: false
       });
     });
   }
@@ -36,7 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Room makeTilesVisible={this.makeTilesVisible} room={this.state.room.path}/>
+        <Room makeTilesVisible={this.makeTilesVisible} isLoading={this.state.isRoomLoading} room={this.state.room.path}/>
         <Tiles visible={this.state.tilesVisibility} updateRoom={this.updateRoom}/>
      </div>
     );

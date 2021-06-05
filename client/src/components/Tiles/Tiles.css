@@ -3,6 +3,7 @@
     background-color: antiquewhite;
     font-size: 30px;
     align-content: center;
+    z-index: 4;
 }
 
 div.card-body{

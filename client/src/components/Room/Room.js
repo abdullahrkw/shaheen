@@ -1,11 +1,13 @@
 import React from 'react';
+import Loader from "react-loader-spinner";
 import './Room.css'
 
 class Room extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            room: this.props.room
+            room: this.props.room,
+            isLoading: this.props.isLoading
         }
     }
 
@@ -16,9 +18,17 @@ class Room extends React.Component {
     }
 
     render() {
+        let isLoading = this.state.isLoading;
+        let roomStyle = {};
+        if (isLoading) {
+            roomStyle = {"opacity": 0.2};
+        }
         return (
             <div onClick={this.props.makeTilesVisible} className="Room">
-                <img src={this.state.room} className="room-img" alt="rooms" />
+                <div className="loader">
+                    <Loader visible={isLoading}type="Puff" color="#00BFFF" height={100} width={100}/>
+                </div>
+                <img style={roomStyle} src={this.state.room} className="room-img" alt="rooms" />
             </div>
         );
     }
