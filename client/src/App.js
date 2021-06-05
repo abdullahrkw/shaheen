@@ -28,7 +28,6 @@ class App extends React.Component {
       this.setState({
         room: { path: res.data.url, id: "1" },
         tilesVisibility: false
-        // isRoomLoading: false
       });
     });
   }
