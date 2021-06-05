@@ -24,12 +24,13 @@ class App extends React.Component {
       state: [],
       regionId: "1" //hardcoded for floor for now
     }).then(res => {
-      setTimeout(()=>{}, 2000)
-      this.setState({
-        room: {path: res.data.url, id: "1"},
-        tilesVisibility: false,
-        isRoomLoading: false
-      });
+      setTimeout(()=>{
+        this.setState({
+          room: {path: res.data.url, id: "1"},
+          tilesVisibility: false,
+          isRoomLoading: false
+        });
+      }, 2000)
     });
   }
 
