@@ -25,6 +25,9 @@ class App extends React.Component {
       state: [],
       regionId: "1" //hardcoded for floor for now
     }).then(res => {
+      if(this.state.room.path === res.data.url){
+        this.setState({ isRoomLoading: false });
+      }
       this.setState({
         room: { path: res.data.url, id: "1" },
         tilesVisibility: false
@@ -41,7 +44,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.isRoomLoading);
     return (
       <div>
         <Room makeTilesVisible={this.makeTilesVisible} isLoading={this.state.isRoomLoading} room={this.state.room.path} stopRoomLoading={this.stopRoomLoading}/>

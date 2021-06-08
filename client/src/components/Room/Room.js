@@ -27,7 +27,7 @@ class Room extends React.Component {
                 <div className="loader">
                     <Loader visible={isLoading} type="Circles" color="#00BFFF" height={100} width={100}/>
                 </div>
-                <img style={roomStyle} src={this.state.room} className="room-img" alt="rooms" onLoad={this.props.stopRoomLoading}/>
+                <img style={roomStyle} onLoad={this.props.stopRoomLoading} src={this.state.room} className="room-img" alt="rooms"/>
             </div>
         );
     }
