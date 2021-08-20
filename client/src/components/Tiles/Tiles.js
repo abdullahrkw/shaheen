@@ -30,17 +30,20 @@ class Tiles extends React.Component {
 
     render() {
         return (
-            <Scrollbars class="tiles-scrollbar" style={{ 
-                                                    height: this.props.visible?500:0, 
-                                                    width:300,
-                                                    transitionProperty: 'height',
-                                                    transitionDuration: '2s', 
-                                                    overflowX: 'hidden'}}
+            <Scrollbars 
+                class="tiles-scrollbar" 
+                style={{ 
+                            height: 500, 
+                            width:this.props.visible?300:0,
+                            transitionProperty: 'width',
+                            transitionDuration: '2s', 
+                            overflowX: 'hidden'
+                        }}
                 renderTrackHorizontal={() => (
                     <div id="Reactsilder" style={{ display: 'none', marginBottom: '0px' }} />
                 )}
             >
-                Tile Designs
+                Tiles
                 {
                     this.state.tiles.map((element) =>
                         <div id="single-tile" onClick={this.updateRoom.bind(this, element.id)} key={element.id}>

@@ -45,9 +45,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="myRoom">
         <Room makeTilesVisible={this.makeTilesVisible} isLoading={this.state.isRoomLoading} room={this.state.room.path} stopRoomLoading={this.stopRoomLoading}/>
-        <Tiles visible={this.state.tilesVisibility} updateRoom={this.updateRoom} />
+        <Tiles visible={this.state.tilesVisibility} updateRoom={this.updateRoom}/>
       </div>
     );
   }
