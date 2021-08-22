@@ -20,14 +20,20 @@ class Room extends React.Component {
         let isLoading = this.props.isLoading;
         let roomStyle = {};
         if (isLoading) {
-            roomStyle = {"opacity": 0.2};
+            roomStyle = { "opacity": 0.2 };
         }
         return (
-            <div onClick={this.props.makeTilesVisible} className="Room">
+            <div className="Room">
                 <div className="loader">
-                    <Loader visible={isLoading} type="Circles" color="#00BFFF" height={100} width={100}/>
+                    <Loader visible={isLoading} type="Circles" color="#00BFFF" height={100} width={100} />
                 </div>
-                <img style={roomStyle} onLoad={this.props.stopRoomLoading} src={this.state.room} className="room-img" alt="rooms"/>
+                <svg viewBox="0 0 1800 1012"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <image href={this.state.room} height="100%" width="100%" />
+                    <polygon onClick={this.props.makeTilesVisible} points="0,1001 0,829 456,573 461,594 789,594 937,613 1089,619 1142,770 1329,775 1336,705 1800,1010 0,1010" fill="yellow" opacity="0" />
+                </svg>
+
             </div>
         );
     }

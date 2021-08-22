@@ -8,8 +8,9 @@ const uri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PAS
 const client = new MongoClient(uri, {
     useUnifiedTopology: true
 });
-const testMongoDBConnection = require('./utils').testMongoDBConnection;
-testMongoDBConnection(client);
+//@TODO Uncomment when DB interface is enabled
+// const testMongoDBConnection = require('./utils').testMongoDBConnection;
+// testMongoDBConnection(client);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
